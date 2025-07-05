@@ -1,0 +1,403 @@
+/* Start styles */
+.start-container {
+  min-height: 100vh;
+  display: flex;
+  background-color: #24786d;
+  padding: 2rem;
+}
+
+.start-content {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #24786d;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.illustration {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.illustration img {
+  max-width: 100%;
+  height: auto;
+}
+
+.login-section {
+  flex: 1;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.progress-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.step-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.step.completed .step-icon {
+  background-color: #24786d;
+  color: white;
+}
+
+.step-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.step.completed .step-text {
+  color: #24786d;
+  font-weight: 500;
+}
+
+.step-connector {
+  height: 2px;
+  background-color: #e5e7eb;
+  width: 100px;
+  margin: 0 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.login-title sup {
+  font-size: 1.25rem;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #24786d;
+  box-shadow: 0 0 0 1px #24786d;
+}
+
+textarea.form-input {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.checkbox-group {
+  margin-top: 1rem;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #1a1a1a;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+}
+
+.checkbox-container:hover input~.checkbox-custom {
+  border-color: #24786d;
+}
+
+.checkbox-container input:checked~.checkbox-custom {
+  background-color: #24786d;
+  border-color: #24786d;
+}
+
+.checkbox-custom:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked~.checkbox-custom:after {
+  display: block;
+}
+
+.checkbox-container .checkbox-custom:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.button-group {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.back-button,
+.submit-button {
+  height: 48px;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.back-button {
+  background-color: white;
+  color: #24786d;
+  border: 1px solid #24786d;
+}
+
+.back-button:hover {
+  background-color: #f3f4f6;
+}
+
+.submit-button {
+  background-color: #24786d;
+  color: white;
+  border: none;
+}
+
+.submit-button:hover {
+  background-color: #1d6158;
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.login-link,
+.create-account-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.login-link a,
+.create-account-link a {
+  color: #24786d;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link a:hover,
+.create-account-link a:hover {
+  text-decoration: underline;
+}
+
+.payment-amount {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.amount-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.amount-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #24786d;
+}
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.payment-method {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.payment-method:hover {
+  border-color: #24786d;
+  background-color: #f9fafb;
+}
+
+.payment-method input[type="radio"] {
+  margin-right: 1rem;
+  margin-top: 0.25rem;
+}
+
+.payment-method-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-method-name {
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+}
+
+.payment-method-description {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+@media (max-width: 1024px) {
+  .start-content {
+    flex-direction: column;
+  }
+
+  .illustration {
+    padding: 3rem 2rem;
+  }
+
+  .illustration img {
+    max-width: 400px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .progress-steps {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .step-connector {
+    width: 2px;
+    height: 20px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .start-container {
+    padding: 1rem;
+  }
+
+  .login-section {
+    padding: 2rem;
+  }
+
+  .illustration {
+    padding: 2rem 1rem;
+  }
+
+  .illustration img {
+    max-width: 300px;
+  }
+
+  .login-title {
+    font-size: 1.5rem;
+  }
+
+  .button-group {
+    grid-template-columns: 1fr;
+  }
+}
