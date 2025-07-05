@@ -13,9 +13,5 @@ export default defineConfig({
     port: 3000,
     host: '127.0.0.1'
   },
-  build: {
-    rollupOptions: {
-      input: '/src/main.jsx' // Ensure this points to main.jsx
-    }
-  }
+  // ❌ Do not override rollup input unless building multi-page apps
 });
